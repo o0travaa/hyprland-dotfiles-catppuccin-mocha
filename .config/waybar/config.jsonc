@@ -1,0 +1,70 @@
+{
+	"position": "top",
+	"layer": "top",
+	"height": 40,
+	"width": 2530,
+	"spacing": 5,
+	"modules-left": [
+		"custom/logo",
+		"custom/space",
+		"hyprland/workspaces",
+	],
+	"modules-center": ["hyprland/window"],
+	"modules-right": [
+		"tray",
+		"custom/space",
+		"pulseaudio",
+		"custom/space",
+		"cpu",
+		"custom/space",
+		"clock",
+		"custom/space",
+		"memory",
+		"custom/space",
+		"network"
+	],
+	"custom/logo": {
+		"format": "   Linux",
+		"on-click": "~/.config/waybar/powermenu.sh",
+		"tooltip": false
+	},
+	"network": {
+		"format-wifi": "  {essid} "
+	},
+	"custom/space": {
+		"format": " :: "
+	},
+	"pulseaudio": {
+	    "format": "{icon} {volume}% {format_source}",
+	    "format-bluetooth": "{icon}  {volume}% {format_source}",
+	    "format-bluetooth-muted": "󰝟  {format_source}",
+	    "format-muted": "󰝟 {format_source}",
+	    "format-source": " {volume}%",
+	    "format-source-muted": " ",
+	    "format-icons": {
+	      "headphone": " ",
+	      "hands-free": " ",
+	      "headset": "󰋎 ",
+	      "phone": " ",
+	      "portable": " ",
+	      "car": " ",
+	      "default": [
+	            "",
+	            " ",
+	            " "
+	      ]
+	    },
+	    "scroll-step": 5,
+	    "on-click": "pavucontrol",
+	    "on-click-right": "blueman-manager"
+	},
+	"memory": {
+	    "interval": 30,
+	    "format": " {used:0.1f}G/{total:0.1f}G",
+	    "tooltip": true,
+	    "tooltip-format": "Free {avail:0.1f}G\nUsed: {percentage}%\nSwap: {swapPercentage}%",
+	},
+	"cpu": {
+		"format": " {usage}%"
+	}
+}

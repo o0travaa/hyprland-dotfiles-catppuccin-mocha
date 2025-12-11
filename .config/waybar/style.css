@@ -1,0 +1,29 @@
+* {
+	font-family: "JetBrains Mono";
+	font-weight: bold;
+}
+
+window#waybar {
+	border-radius: 10;
+}
+
+#cpu.warning {
+	color: orange;
+}
+
+#cpu.critical {
+	color: red;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+}
+
+#workspaces button.active {
+	color: #eba0ac;
+}
+	
