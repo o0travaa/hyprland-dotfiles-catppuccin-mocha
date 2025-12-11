@@ -5,7 +5,7 @@ if ! command -v yay >/dev/null 2>&1; then
 fi
 
 echo "Installing paсkages..."
-sudo pacman -S --needed hyprland kitty waybar ttf-jetbrains-mono
+sudo pacman -S --needed hyprland kitty waybar ttf-jetbrains-mono wofi
 yay -S --needed ttf-jetbrains-mono-nerd catppuccin-theme-gtk-mocha
 
 echo "Copying..."
